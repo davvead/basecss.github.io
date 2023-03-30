@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>BaseCSS</title>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="">
+        <div class="index-container py-2">
+            <div class="nav flex">
+                <div class="nav-left py-1">
+                    <h1 class="big-font font-blue">BaseCSS</h1>
+                </div>
+                <div class="nav-right ml-auto flex">
+                    <!-- <button class="bg-white py-1 px-3 border-thin action-btn font-blue">Download</button> -->
+                    <a href="docs.html" class="docs normal-font fw-thick">Docs</a>
+                    <div class="nav-right-icon">
+                        <i class="fa fa-github big-font ml-2 pt-1" aria-hidden="true"></i>
+                        <i class="fa fa-youtube-play big-font ml-2 py-1" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="nav-mobile-toggle ml-auto flex">
+                    <i class="fa fa-bars big-font"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation Start -->
+        <div class="mobile-nav px-1 hide">
+            <div class="close flex">
+                <i class="fa fa-close ml-auto hide big-font"></i>
+            </div>
+            <div class="flex">
+                <ul class="nav-links">
+                    <h1 class="big-font font-blue mb-2">BaseCSS</h1>
+                    <li class="sub-category mb-1"><a href="docs.html">Docs</a></li>
+                </ul>
+            </div>
+            <div class="flex social-icons">
+                <i class="fa fa-github big-font ml-2 py-1" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play big-font ml-2 py-1" aria-hidden="true"></i>
+            </div>
+        </div>
+        <!-- Mobile Navigation End -->
+    </nav>
+    <!-- Nav End -->
+
+    <!-- Main Hero -->
+
+    <!-- Main Hero End -->
+    <main>
+        <div class="container">
+            <div id="display">
+                <h1 class="fw-extra-thick hero font-blue mb-1">Learn CSS and JavaScript fundamentals with style!</h1>
+                <p>A light-weight framework that will beautify your JavaScript learning experience and challenge you to master CSS.</p>
+
+                <center><button class="py-1 px-2 mt-3 border-none bg-black font-white">Get Started</button></center>
+            </div>
+        </div>
+    </main>
+    <!-- Background Style -->
+    <style>
+        body {
+            background-image: url(assets/bg-4.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        @media (max-width:500px) {
+            body {
+                background-image: url(/assets/bg-img.png) !important;
+            }
+        }
+    </style>
+    <script>
+        // Mobile Toggle
+const mobile = document.querySelector('.fa-bars');
+const closeMobileNav = document.querySelector('.close');
+const mobileNav = document.querySelector('.mobile-nav');
+
+// Listening for a click on the mobile toggle
+mobile.onclick = function toggleMoblie(){
+    if(mobileNav.style.display = 'none'){
+        mobileNav.style.display = 'block';
+    }
+}
+
+// Listening for a click on the mobile nav close button
+closeMobileNav.onclick = function closeMoblie(){
+    if(mobileNav.style.display != 'none'){
+        mobileNav.style.display = 'none';
+    }
+}
+    </script>
+</body>
+</html>
